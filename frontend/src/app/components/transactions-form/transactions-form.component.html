@@ -2,7 +2,7 @@
   <h2 class="section-title mb-4">{{ getFormTitle() }}</h2>
   <div class="d-flex gap-2 mb-3">
     <a class="btn btn-outline-secondary" routerLink="/gastos">Cancelar</a>
-    <button type="button" class="btn btn-primary" (click)="savetransaction()" [disabled]="this.transactionsForm.invalid">Guardar gasto</button>
+    <button type="button" class="btn btn-primary" (click)="savetransaction()" [disabled]="this.transactionsForm.invalid">Adicionar Transacao</button>
   </div>
 </div>
 
@@ -36,8 +36,8 @@
     <label for="transactionDateInput" class="form-label">Data do gasto</label>
     <input type="date" formControlName="expense_date" class="form-control {{ hasError('expense_date') ? 'is-invalid' : '' }}" id="transactionDateInput">
     <div class="invalid-feedback" [ngSwitch]="getCurrentError('expense_date')">
-      <span *ngSwitchCase="'required'">O campo data do gasto é requerido</span>
+      <span *ngSwitchCase="'required'">O campo data é requerido</span>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary" [disabled]="this.transactionsForm.invalid">Guardar gasto</button>
+  <button type="submit" class="btn btn-primary" [disabled]="this.transactionsForm.invalid">Adicionar Transacao</button>
 </form>
