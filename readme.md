@@ -1,3 +1,8 @@
+![image](https://github.com/user-attachments/assets/0dfb67cb-7a13-49a2-9e5e-5a816f223d49)
+
+![image](https://github.com/user-attachments/assets/426a0f5c-9455-42a2-9f59-8dc643643a75)
+
+![image](https://github.com/user-attachments/assets/2b6129eb-0790-420b-84a7-ac42af5e95cc)
 
 # Aplicação de Gerenciamento de Transações Financeiras
 
@@ -13,24 +18,48 @@ Esta aplicação permite gerenciar transações financeiras, incluindo receitas 
 
 Antes de começar, você precisa ter instalado:
 
-- [Node.js](https://nodejs.org/en/) (versão LTS recomendada)
-- [Angular CLI](https://angular.io/cli) (instalável via npm)
-- [PHP](https://www.php.net/downloads) (versão 8.0 ou superior)
-- [Composer](https://getcomposer.org/) (para gerenciamento de pacotes PHP)
-- [MySQL](https://www.mysql.com/) (versão 5.7 ou superior)
+- [Node.js](https://nodejs.org/en/) (v18+)
+- [Angular CLI](https://angular.io/cli) (18+)
+- [PHP](https://www.php.net/downloads) (8+)
+- [Laravel](https://laravel.com/docs/11.x/installation) (11+)
+- [Composer](https://getcomposer.org/)
+- [MySQL](https://www.mysql.com/)
 
-## Configuração do Banco de Dados
+## Como Executar o Projeto
 
-### Script SQL
+Siga os passos abaixo para rodar a aplicação de gerenciamento de transações financeiras:
 
-Execute o seguinte script SQL para criar a tabela `transactions` no seu banco de dados MySQL:
+### 1. Clonar o Repositório
 
-```sql
-CREATE TABLE transactions (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    type VARCHAR(155) NOT NULL,
-    amount DECIMAL(10, 2) NOT NULL,
-    description VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
+Clone o repositório para sua máquina local:
+
+```bash
+git clone https://github.com/seu_usuario/seu_repositorio.git
+
+```Composer
+composer install
+
+```.env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nome_do_banco
+DB_USERNAME=seu_usuario
+DB_PASSWORD=sua_senha
+
+```Gerar a Chave da Aplicação
+php artisan key:generate
+
+``` Rodar a aplicação
+php artisan serve
+
+```Angular
+npm install
+
+```Iniciar o servidor
+ng serve
+
+````Acessar a Aplicação
+Backend: http://127.0.0.1:8000
+Frontend: http://127.0.0.1:4200
+
