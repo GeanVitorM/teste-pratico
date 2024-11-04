@@ -2,6 +2,7 @@
 
 ![image](https://github.com/user-attachments/assets/426a0f5c-9455-42a2-9f59-8dc643643a75)
 
+![image](https://github.com/user-attachments/assets/0d48d401-15ed-464d-8fb3-18e831adcb50)
 
 # Aplicação de Gerenciamento de Transações Financeiras
 
