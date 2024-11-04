@@ -63,7 +63,7 @@ export class TransactionsFormComponent implements OnInit {
   }
 
   getFormTitle(): string {
-    return this.transactionsId ? 'Editar gasto' : 'Nuevo gasto';
+    return this.transactionsId ? 'Editar gasto' : 'Novo Gasto';
   }
 
   private loadDataIntoForm(): void {
