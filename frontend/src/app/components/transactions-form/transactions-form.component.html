@@ -9,10 +9,13 @@
 <form class="mb-5" [formGroup]="transactionsForm" (ngSubmit)="savetransaction()">
   <div class="mb-3">
     <label for="typeInput" class="form-label">Tipo de gasto</label>
-    <input type="text" formControlName="type" class="form-control {{ hasError('type') ? 'is-invalid' : '' }}" id="typeInput" placeholder="Transporte, Comida, Outros">
+    <select formControlName="type" class="form-select {{ hasError('type') ? 'is-invalid' : '' }}" id="typeInput">
+      <option value="" disabled selected>Selecione um tipo</option>
+      <option value="receita">Receita</option>
+      <option value="despesa">Despesa</option>
+    </select>
     <div class="invalid-feedback" [ngSwitch]="getCurrentError('type')">
       <span *ngSwitchCase="'required'">O campo tipo é requerido</span>
-      <span *ngSwitchCase="'maxlength'">O campo tipo deve conter no máximo 100 caracteres</span>
     </div>
   </div>
   <div class="mb-3">

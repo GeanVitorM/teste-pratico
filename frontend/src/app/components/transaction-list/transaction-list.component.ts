@@ -11,6 +11,8 @@ import * as Toastify from 'toastify-js';
 export class TransactionListComponent implements OnInit {
   transaction: Transaction[] = [];
   total: number = 0;
+  totalExpenses: number = 0; 
+  totalRevenue: number = 0;
 
   constructor(private transactionService: TransactionsService) { }
 
@@ -35,8 +37,19 @@ export class TransactionListComponent implements OnInit {
 
   private calculateTotal(): void {
     this.total = this.transaction.reduce((accumulated, currentValue) => {
-      return accumulated + Number(currentValue.amount);
+      const amount = currentValue.type === 'expense' 
+        ? -Number(currentValue.amount)
+        : Number(currentValue.amount);
+      return accumulated + amount;
     }, 0);
+
+    this.totalExpenses = this.transaction
+      .filter(t => t.type === 'despesa')
+      .reduce((acc, curr) => acc + Number(curr.amount), 0);
+
+    this.totalRevenue = this.transaction
+      .filter(t => t.type === 'receita')
+      .reduce((acc, curr) => acc + Number(curr.amount), 0);
   }
 
   private showSuccessToast(message: string): void {

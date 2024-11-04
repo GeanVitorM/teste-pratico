@@ -1,8 +1,12 @@
 <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mt-5 mb-4">
   <h2 class="section-title">Gastos</h2>
-
   <div class="d-flex align-items-center flex-wrap gap-3 gap-sm-5">
-    <p class="m-0 total-spent-text">Total gasto: <span class="fw-bold ms-1"><i class="ri-arrow-down-s-fill text-danger"></i> {{ total | currency }}</span></p>
+    <p class="m-0 total-spent-text">Total de receitas: <span class="fw-bold ms-1"><i
+          class="ri-arrow-up-s-fill text-success"></i> {{ totalRevenue | currency }}</span></p>
+    <p class="m-0 total-spent-text">Total de despesas: <span class="fw-bold ms-1"><i
+          class="ri-arrow-down-s-fill text-danger"></i> {{ totalExpenses | currency }}</span></p>
+    <p class="m-0 total-spent-text">Total gasto: <span class="fw-bold ms-1"><i
+          class="ri-arrow-down-s-fill text-danger"></i> {{ total | currency }}</span></p>
     <a class="btn btn-primary" routerLink="/gastos/novo">Adicionar gasto</a>
   </div>
 </div>
@@ -31,7 +35,8 @@
           <td class="table-data-action">
             <div>
               <a [routerLink]="['/gastos', transaction.id, 'editar']"><i class="ri-edit-box-line"></i></a>
-              <button class="btn btn-link p-0" (click)="deleteTransaction(transaction.id)"><i class="ri-delete-bin-2-line"></i></button>
+              <button class="btn btn-link p-0" (click)="deleteTransaction(transaction.id)"><i
+                  class="ri-delete-bin-2-line"></i></button>
             </div>
           </td>
         </tr>
