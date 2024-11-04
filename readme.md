@@ -4,6 +4,9 @@
 
 ![image](https://github.com/user-attachments/assets/0d48d401-15ed-464d-8fb3-18e831adcb50)
 
+![image](https://github.com/user-attachments/assets/191eea1b-76dc-4c6f-beba-d4c0a80ce380)
+
+
 # Aplicação de Gerenciamento de Transações Financeiras
 
 Esta aplicação permite gerenciar transações financeiras, incluindo receitas e despesas. Os usuários podem adicionar, editar e excluir transações, além de visualizar um resumo dos gastos e receitas.
